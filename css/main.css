@@ -28,7 +28,7 @@ p {
   margin: 0; }
 
 .link {
-  color: #51ddfc;
+  color: #f2878a;
   text-decoration: none;
   font-weight: 700; }
 
@@ -382,10 +382,12 @@ template {
   .grid__col--12 {
     width: 100%; } }
 
-@media (min-width: 768px) {
-  .centered {
-    max-width: 100%;
-    margin: 0 auto; } }
+.centered {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .centered {
+      max-width: 100%;
+      margin: 0 auto; } }
 
 [class^="grid__col--"] {
   font-weight: 500;
@@ -413,7 +415,7 @@ template {
   .form__input {
     margin: 1em 0;
     width: 100%;
-    border-bottom: 5px solid #ffb3ba;
+    border-bottom: 5px solid #f2878a;
     border-top: transparent;
     border-right: transparent;
     border-left: transparent; }
@@ -434,7 +436,7 @@ button[class^='btn'] {
       margin: 1em  0; } }
 
 .select-style {
-  border: 3px solid #ffb3ba;
+  border: 3px solid #f2878a;
   border-radius: 1px;
   margin: 1em 0; }
 
@@ -450,7 +452,7 @@ button[class^='btn'] {
   outline: none; }
 
 .theme__colors.btn--default {
-  background-color: #ffb3ba; }
+  background-color: #f2878a; }
 .theme__colors.btn--success {
   background-color: #63cc82; }
 .theme__colors.btn--error {
@@ -521,11 +523,11 @@ button[class^='btn'] {
       padding: 10px 20px;
       border-radius: 5px;
       color: #fff;
-      background-color: #ffb3ba; }
+      background-color: #f2878a; }
 
 .headline--primary {
   font-size: 2.625em;
-  color: #ffb3ba;
+  color: #f2878a;
   line-height: 1.2;
   margin: 1em 0 0em 0em;
   font-family: "Permanent Marker", cursive; }
@@ -546,7 +548,7 @@ strong {
   font-style: italic;
   line-height: 1.4;
   font-weight: 400;
-  border-left: solid 10px #ffb3ba;
+  border-left: solid 10px #f2878a;
   border-radius: 5px;
   padding-left: 20px;
   margin: 1em 0;

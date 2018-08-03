@@ -30,6 +30,7 @@
 }
 
 .centered{
+  text-align: center;
   @include mq(medium){
   max-width: 100%;
   margin: 0 auto;

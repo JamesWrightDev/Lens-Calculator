@@ -2,6 +2,7 @@
 * === Variables ===
 */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 /*
 * === Mixins ===
 */
@@ -336,6 +337,12 @@ template {
 .container {
   margin: 0 10%; }
 
+.box__shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  padding: 2em;
+  background-color: #FFF; }
+
 .grid__row {
   margin: 1.5em 0;
   display: flex;
@@ -401,11 +408,12 @@ template {
         margin-left: 2%; } }
 
 .form {
+  width: 90%;
   text-alight: left; }
   .form__input {
     margin: 1em 0;
     width: 100%;
-    border-bottom: 5px solid #58e1c1;
+    border-bottom: 5px solid #ffb3ba;
     border-top: transparent;
     border-right: transparent;
     border-left: transparent; }
@@ -423,10 +431,26 @@ button[class^='btn'] {
   text-transform: uppercase; }
   @media (min-width: 768px) {
     button[class^='btn'] {
-      margin: 0 1em 0 0; } }
+      margin: 1em  0; } }
+
+.select-style {
+  border: 3px solid #ffb3ba;
+  border-radius: 1px;
+  margin: 1em 0; }
+
+.select-style select {
+  padding: 5px 8px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none; }
+
+.select-style select:focus {
+  outline: none; }
 
 .theme__colors.btn--default {
-  background-color: #58e1c1; }
+  background-color: #ffb3ba; }
 .theme__colors.btn--success {
   background-color: #63cc82; }
 .theme__colors.btn--error {
@@ -497,22 +521,24 @@ button[class^='btn'] {
       padding: 10px 20px;
       border-radius: 5px;
       color: #fff;
-      background-color: #58e1c1; }
+      background-color: #ffb3ba; }
 
 .headline--primary {
-  font-size: 2em;
-  font-weight: 700;
-  color: #58e1c1;
+  font-size: 2.625em;
+  color: #ffb3ba;
   line-height: 1.2;
-  margin: 1em 0 1em 1em;
-  font-family: "Roboto", sans-serif, Helvetica, Arial, "Lucida Grande", sans-serif; }
+  margin: 1em 0 0em 0em;
+  font-family: "Permanent Marker", cursive; }
 
 .headline--secondary {
   font-size: 1.125em;
-  font-weight: 100;
+  font-weight: 400;
   margin: 1em 0;
   font-family: "Roboto", sans-serif, Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #858585; }
+
+strong {
+  font-weight: 700; }
 
 .blockquote {
   font-family: "Roboto", sans-serif, Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -520,7 +546,7 @@ button[class^='btn'] {
   font-style: italic;
   line-height: 1.4;
   font-weight: 400;
-  border-left: solid 10px #58e1c1;
+  border-left: solid 10px #ffb3ba;
   border-radius: 5px;
   padding-left: 20px;
   margin: 1em 0;

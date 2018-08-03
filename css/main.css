@@ -20,7 +20,8 @@ li {
   padding: 0;
   list-style-type: none; }
 
-p {
+p, input, select {
+  font-family: "Roboto", sans-serif, Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #858585;
   font-size: 16px;
   line-height: 1.8;
@@ -415,7 +416,7 @@ template {
   .form__input {
     margin: 1em 0;
     width: 100%;
-    border-bottom: 5px solid #f2878a;
+    border-bottom: 4px solid #f2878a;
     border-top: transparent;
     border-right: transparent;
     border-left: transparent; }
@@ -435,21 +436,12 @@ button[class^='btn'] {
     button[class^='btn'] {
       margin: 1em  0; } }
 
-.select-style {
-  border: 3px solid #f2878a;
-  border-radius: 1px;
-  margin: 1em 0; }
-
 .select-style select {
-  padding: 5px 8px;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  background-image: none;
-  -webkit-appearance: none; }
-
-.select-style select:focus {
-  outline: none; }
+  margin: 1em 0;
+  width: 100%;
+  height: 2em;
+  background-color: white;
+  -webkit-appearance: menulist-button; }
 
 .theme__colors.btn--default {
   background-color: #f2878a; }

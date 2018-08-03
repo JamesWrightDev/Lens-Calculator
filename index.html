@@ -60,14 +60,14 @@
         let lens = document.getElementById('lens').value;
         let lensValue = parseFloat(lens);
         let result = (lensValue * frameValue).toFixed(0);
-          if(isNaN(result)){
-              output.innerHTML = "";
-          }
-          else{        
-            output.innerHTML = "<strong>Result:</strong>"+ " " + result + "mm";  
-          }
+            if(isNaN(result)){
+                output.innerHTML = "";
+            }
+            else{        
+              output.innerHTML = "<strong>Result:</strong>"+ " " + result + "mm";  
+            }
     })
-
+    
 
   </script>
 </body>

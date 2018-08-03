@@ -19,7 +19,8 @@ li {
 
 
 
-p,{
+p, input, select{
+	font-family: $font-serif;
 	color: $col-font;
 	font-size: $font-size-default;
 	line-height: $font-line-height;

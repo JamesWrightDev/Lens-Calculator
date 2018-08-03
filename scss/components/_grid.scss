@@ -1,0 +1,70 @@
+
+/*
+* === Grid ===
+*/
+
+.container{
+	margin: 0 10%;
+
+}
+
+.box__shadow{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    padding: 2em;
+    background-color: #FFF
+}
+
+.grid__row {
+  margin: 1.5em 0;
+	@include flex;
+	@include mq(medium){
+		@include flex(row);
+	}
+}
+.grid__col {
+  @include mq(medium) {
+    @include g-columns;
+  }
+
+}
+
+.centered{
+  @include mq(medium){
+  max-width: 100%;
+  margin: 0 auto;
+ }
+}
+
+
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+// Column styles
+
+[class^="grid__col--"] {
+  font-weight: $font-medium;
+  color: $col-font;
+
+  @include mq(small)  {
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+    width: 100%;
+    
+
+  }
+  @include mq(medium) {
+    @include doubly(percentage($g-gutter-width / $context));    
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include flex(row, center);
+  
+    }
+  }

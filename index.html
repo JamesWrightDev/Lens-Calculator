@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Lens Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="container">
+      <div class="grid__row">
+        <div class="grid__col--12">
+          <h1 class="headline--primary">A Simple Lens Calculator</h1>
+      </div>
+    </div>
+    <div class="grid__row">
+        <div class="grid__col--5 centered box__shadow">
+          <form action="" class="form">
+            <input type="text" id="lens" class="form__input" placeholder="Lens (mm)">
+            <div class="select-style">
+              <select name="" id="sensor">
+                <option value="">Select Your Frame Size</option>
+                <option value= 1.5 >General APS-C (Nikon, Samsung NX)</option>
+                <option value= 1.6 >Canon APS-C</option>
+                <option value= 2 >Micro Four Thirds</option>
+                <option value= 1.3 >APS-H</option>
+              </select>
+            </div>
+              <button class="btn--default theme__colors">Calculate</button>
+              <p class="headline--secondary" id="result"></p>
+            </form>
+            </div>
+  </div>
+  <script>
+    const button = document.querySelector('button');
+    const output = document.getElementById('result');
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        let frameValue =  parseFloat(document.getElementById('sensor').value);
+        let lens = document.getElementById('lens').value;
+        let lensValue = parseFloat(lens);
+        let result = (lensValue * frameValue).toFixed(0);
+          if(isNaN(result)){
+              output.innerHTML = "";
+          }
+          else{        
+            output.innerHTML = "<strong>Result:</strong>"+ " " + result + "mm";  
+          }
+    })
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+
+.theme__colors {
+	@include btn;
+}
+
+button[class^='btn'] {
+	width: 100%;
+	margin: 1em 0;
+	color: $col-white;
+	font-weight: $font-medium;
+	text-transform: uppercase;
+	@include mq(medium){
+		margin: 1em  0;
+	}
+}
+
+.select-style{
+	 border: 3px solid $col-primary;
+	 border-radius: 1px;
+	 margin: 1em 0;
+
+}
+
+.select-style select{
+	padding: 5px 8px;
+	border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+
+.theme__colors {
+	&.btn--default{
+		background-color: $col-primary;
+	}
+	&.btn--success{
+		background-color: $col-success;
+	}
+	&.btn--error{
+		background-color: $col-error;
+	}
+	&.btn--warning{
+		background-color: $col-warn;
+	}
+	&.btn--info{
+		background-color: $col-info;
+	}
+
+	&.grid__col--12{
+		background-color: $col--12;
+	}
+	&.grid__col--8{
+		background-color: $col--8;
+	}
+	&.grid__col--7{
+		background-color: $col--7;
+	}
+	&.grid__col--6{
+		background-color: $col--6;
+	}
+	&.grid__col--5{
+		background-color: $col--5;
+	}
+	&.grid__col--4{
+		background-color: $col--4;
+	}
+	&.grid__col--3{
+		background-color: $col--3;
+	}
+
+
+}
+
